@@ -1,0 +1,5 @@
+<app-buscador (eventos)="comicsBuscados($event)"></app-buscador>
+<app-loading *ngIf="!mostrar"></app-loading>
+<div *ngIf="mostrar" class="card-columns mt-3">
+    <app-tarjeta-comics (click)="verComic(comic.id)" [comic]="comic" *ngFor="let comic of comics; let i = index"></app-tarjeta-comics>
+</div>

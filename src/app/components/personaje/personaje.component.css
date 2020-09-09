@@ -1,0 +1,9 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedorLetras {
+    align-self: center;
+    margin-left: 2px;
+}

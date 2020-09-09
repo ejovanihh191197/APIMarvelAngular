@@ -1,0 +1,10 @@
+<div class="row mt-3">
+    <div class="col">
+        <button class="btn btn-outline-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Buscar ...
+          </button>
+        <div class="collapse mt-3" id="collapseExample">
+            <input #termino (keyup)="enviarCadena(termino.value)" type="text" class="form-control" placeholder="Ingrese el personaje que desea buscar ...">
+        </div>
+    </div>
+</div>

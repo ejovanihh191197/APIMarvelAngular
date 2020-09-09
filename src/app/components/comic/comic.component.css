@@ -1,0 +1,9 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-flex {
+    display: inline-flex;
+    margin-right: 10px;
+}

@@ -1,0 +1,8 @@
+<app-buscador (eventos)="buscarPersonaje( $event )"></app-buscador>
+<app-loading *ngIf="mostrar"></app-loading>
+<div class="card-columns mt-3">
+    <app-tarjeta-superheroe (click)="irAPersonaje(heroe.id)" [heroe]="heroe" *ngFor="let heroe of characters; let i = index"></app-tarjeta-superheroe>
+</div>
+<div *ngIf="characters.length === 0 && !mostrar" class="alert alert-warning mt-5" role="alert">
+    No se encontraron personajes, asegurese de hacer la busqueda en ingles
+</div>

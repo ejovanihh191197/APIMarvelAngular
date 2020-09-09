@@ -1,0 +1,41 @@
+<app-loading *ngIf="mostrar"></app-loading>
+<div *ngIf="!mostrar" class="row mt-3">
+    <div class="col-5">
+        <img class="img-fluid sombras" src="{{personaje.thumbnail.path}}.jpg" alt="">
+    </div>
+    <div class="col-7">
+        <h1>{{ personaje.name }}</h1>
+        <hr>
+        <h3>Descripción:</h3>
+        <p *ngIf="personaje.description != ''">{{ personaje.description }}</p>
+        <div *ngIf="personaje.description == ''" class="alert alert-secondary" role="alert">
+            No hay información aún en la base de Datos
+        </div>
+        <hr>
+        <h3>Más datos:</h3>
+        <div class="flex">
+            <div class="contenedorNumeros text-right">
+                <h5><span class="badge badge-secondary">{{ personaje.comics.available | number}}</span></h5>
+                <h5><span class="badge badge-secondary">{{ personaje.series.available |number }}</span></h5>
+                <h5><span class="badge badge-secondary">{{ personaje.stories.available | number}}</span></h5>
+                <h5><span class="badge badge-secondary">{{ personaje.events.available | number}}</span></h5>
+            </div>
+            <div class="contenedorLetras">
+                <h5>Número de Comics</h5>
+                <h5>Número de Series</h5>
+                <h5>Número de Comics con historia</h5>
+                <h5>Apariciones</h5>
+            </div>
+        </div>
+        <button (click)="regresar()" style="width: 50%;" class="btn btn-outline-danger">Regresar</button>
+    </div>
+</div>
+<div *ngIf="!mostrar" class="row mt-4">
+    <div class="col">
+        <h2>Comics <small>(Ultimos lanzamientos)</small></h2>
+        <hr>
+        <div class="card-columns">
+            <app-tarjeta-comics [comic]="comic" *ngFor="let comic of comics"></app-tarjeta-comics>
+        </div>
+    </div>
+</div>

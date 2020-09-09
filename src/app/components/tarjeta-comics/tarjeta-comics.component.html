@@ -1,0 +1,12 @@
+<div class="card bg-light sombras puntero">
+    <img src="{{comic.thumbnail.path}}.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ comic.title }}</h5>
+        <hr>
+        <h6 class="card-subtitle">Formato: <span class="badge badge-dark">{{ comic.format }}</span></h6>
+        <hr>
+        <h6 class="card-subtitle">Lanzamiento: <span class="badge badge-dark">{{ comic.dates[0].date | date: 'longDate' }}</span></h6>
+        <hr>
+        <h6 class="card-subtitle">Personajes: <span style="margin-right: 3px;" *ngFor="let personaje of comic.characters.items" class="badge badge-dark">{{ personaje.name }} </span></h6>
+    </div>
+</div>

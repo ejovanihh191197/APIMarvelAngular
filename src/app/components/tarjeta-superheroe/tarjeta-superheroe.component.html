@@ -1,0 +1,12 @@
+<div class="card bg-light sombras puntero">
+    <img src="{{heroe.thumbnail.path}}.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ heroe.name }}</h5>
+        <hr>
+        <h6 class="card-subtitle">Comics: <span class="badge badge-dark">{{ heroe.comics.available | number }}</span></h6>
+        <hr>
+        <h6 class="card-subtitle">Series: <span class="badge badge-dark">{{ heroe.series.available | number }}</span></h6>
+        <hr>
+        <h6 class="card-subtitle">Apariciones: <span class="badge badge-dark">{{ heroe.events.available | number }}</span></h6>
+    </div>
+</div>
