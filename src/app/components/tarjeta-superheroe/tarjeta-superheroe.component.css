@@ -1,0 +1,11 @@
+.card{
+  width: 320px;
+  border-radius:  10%;
+  overflow: hidden;
+}
+
+.card-subtitle{
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+}
