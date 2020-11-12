@@ -1,9 +1,9 @@
 <app-loading *ngIf="!mostrar"></app-loading>
 <div *ngIf="mostrar" class="row mt-3">
-    <div class="col-4">
+    <div class="col-md-4">
         <img class="img-fluid sombras" src="{{ comic.thumbnail.path }}.jpg" alt="">
     </div>
-    <div class="col-8">
+    <div class="col-md-8">
         <button (click)="regresar()" class="btn btn-outline-secondary">Regresar</button>
         <h1>{{ comic.title }}</h1>
         <hr>
@@ -18,7 +18,7 @@
         <h4>Información del comic</h4>
         <hr>
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
                 <h5>Fecha de venta</h5>
                 <h5><em><small>{{comic.dates[0].date | date: 'longDate'}}</small></em></h5>
                 <h5>Serie del comic</h5>
@@ -26,7 +26,7 @@
                 <h5>Número de páginas</h5>
                 <h5><em><small>{{ comic.pageCount }}</small></em></h5>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <h5>Precio de venta</h5>
                 <h5><em><small>{{ comic.prices[0].price | currency }}</small></em></h5>
                 <h5>Creadores</h5>
